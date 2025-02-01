@@ -1,0 +1,122 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #0D0B0F;
+    color: white;
+    z-index: 0;
+    
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #C56DFF !important;
+    z-index: 1000;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: white !important;
+}
+
+.navbar .nav-link:hover {
+    color: #f0f0f0 !important;
+}
+
+.navbar .dropdown-menu {
+    background-color: #C56DFF;
+}
+
+.navbar .dropdown-item {
+    color: white;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #A652E5;
+}
+
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #C56DFF;
+}
+
+main {
+    flex: 1;
+    padding-top: 80px; 
+}
+
+footer {
+    background-color: #C56DFF;
+    color: #E7C2FF;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.card {
+    width: 190px;
+    max-width: 220px;
+    height: 260px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    
+    width: 200px;
+    height: 270px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+    z-index: -2;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+}
+
+.card::after {
+    content: "";
+   z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    filter: blur(20px);
+  }
+
+.card:hover::before {
+    transform: rotate(-90deg) scaleX(1.34) scaleY(0.74);
+}
+
+
+.heading {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card p:last-child {
+    color: #e81cff;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
